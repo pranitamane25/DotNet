@@ -1553,11 +1553,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\TAP\\DotNet\\DotNet\\simpledb\\simpledb.csproj",
+      "projectUniqueName": "D:\\Transflower\\TAP\\DotNet\\DotNet\\simpledb\\simpledb.csproj",
       "projectName": "simpledb",
-      "projectPath": "C:\\TAP\\DotNet\\DotNet\\simpledb\\simpledb.csproj",
+      "projectPath": "D:\\Transflower\\TAP\\DotNet\\DotNet\\simpledb\\simpledb.csproj",
       "packagesPath": "C:\\Users\\prani\\.nuget\\packages\\",
-      "outputPath": "C:\\TAP\\DotNet\\DotNet\\simpledb\\obj\\",
+      "outputPath": "D:\\Transflower\\TAP\\DotNet\\DotNet\\simpledb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\prani\\AppData\\Roaming\\NuGet\\NuGet.Config"
