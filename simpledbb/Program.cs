@@ -1,6 +1,7 @@
 ﻿
 using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Asn1.Misc;
+//using Org.BouncyCastle.Asn1.Misc;
+
 using System;
 using System.Data;
 
@@ -9,7 +10,7 @@ class directconnectivity
     // This is a simple C# program that connects to a MySQL database, creates a table,
     static void Main()
     { 
-     string connectionString = "Server=localhost;Port=3306;Database=sample;User=root;Password=password;";
+     string connectionString = "Server=localhost;Port=3306;Database=emp;User=root;Password=password;";
       using(MySqlConnection connection = new MySqlConnection(connectionString))
       {
             try
