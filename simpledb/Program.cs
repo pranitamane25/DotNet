@@ -26,8 +26,8 @@ class directconnectivity
              string insertSql = "INSERT INTO users (name, email) VALUES (@name, @email)";
              using (MySqlCommand insertCommand = new MySqlCommand(insertSql, connection))
              {
-                insertCommand.Parameters.AddWithValue("@name", "Shital Patil");
-                insertCommand.Parameters.AddWithValue("@email", "shital@tfl.com");
+                insertCommand.Parameters.AddWithValue("@name", "Pranita Mane");
+                insertCommand.Parameters.AddWithValue("@email", "pranita@tfl.com");
 
                  int rowsAffected = insertCommand.ExecuteNonQuery();
                  Console.WriteLine($"Inserted {rowsAffected} row(s) into the users table.");
@@ -35,14 +35,14 @@ class directconnectivity
             string updateSql = "UPDATE users SET email = @newEmail WHERE name = @name";
             using (MySqlCommand updateCommand = new MySqlCommand(updateSql, connection))
             {
-                updateCommand.Parameters.AddWithValue("@newEmail", "updated@tfl.com");
-                updateCommand.Parameters.AddWithValue("@name", "Shital Patil");
+                updateCommand.Parameters.AddWithValue("@newEmail", "pranita@tfl.com");
+                updateCommand.Parameters.AddWithValue("@name", "Pranita Mane");
                 updateCommand.ExecuteNonQuery();
             }
-            string deleteSql = "DELETE FROM users WHERE id = 2";
+            string deleteSql = "DELETE FROM users WHERE id = 7";
             using (MySqlCommand deleteCommand = new MySqlCommand(deleteSql, connection))
             {
-                deleteCommand.Parameters.AddWithValue("@id", "2");
+                deleteCommand.Parameters.AddWithValue("@id", "7");
                  deleteCommand.ExecuteNonQuery();
                
             }
@@ -56,7 +56,6 @@ class directconnectivity
         {
             connection.Close();
         }
-
 
 
         {

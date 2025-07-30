@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("simpledb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07a45988a74fe84f385c517ab4864734354eb8d7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ba9a28d1ebe8d8803713e0a300c6f78f93db084")]
 [assembly: System.Reflection.AssemblyProductAttribute("simpledb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("simpledb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
