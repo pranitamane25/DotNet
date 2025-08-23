@@ -33,17 +33,20 @@ class directconnectivity
                  Console.WriteLine($"Inserted {rowsAffected} row(s) into the users table.");
              }
             string updateSql = "UPDATE users SET email = @newEmail WHERE name = @name";
+            //string updateSql = "UPDATE users SET name = @newname WHERE id = @id";
+            //string updateSql= "UPDATE users SET email= @newemail WHERE id = @id";
             using (MySqlCommand updateCommand = new MySqlCommand(updateSql, connection))
             {
-                updateCommand.Parameters.AddWithValue("@newEmail", "pranita@tfl.com");
-                updateCommand.Parameters.AddWithValue("@name", "Pranita Mane");
+                updateCommand.Parameters.AddWithValue("@newemail", "rahul@tfl");
+                updateCommand.Parameters.AddWithValue("@newname", "rahul");
+                updateCommand.Parameters.AddWithValue("@id", 14);
                 updateCommand.ExecuteNonQuery();
             }
-            string deleteSql = "DELETE FROM users WHERE id = 7";
+            string deleteSql = "DELETE FROM users WHERE id = 15";
             using (MySqlCommand deleteCommand = new MySqlCommand(deleteSql, connection))
             {
-                deleteCommand.Parameters.AddWithValue("@id", "7");
-                 deleteCommand.ExecuteNonQuery();
+                deleteCommand.Parameters.AddWithValue("@id", "15");
+                deleteCommand.ExecuteNonQuery();
                
             }
             
