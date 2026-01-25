@@ -1,12 +1,17 @@
 using HR.Interfaces;
 namespace HR;
-public class  SalesEmployee : Employee
+public class  SalesEmployee : Employee, IAppraisable
 {
     public double Incentive;
     public double Target;
     public double AchievedTarget;
     public double BasicSalary;
     public double HRA;
+
+    public SalesEmployee()
+    {
+        
+    }
 
     //parameterised constructor
     public SalesEmployee(int id, string firstName, string lastName,string email,string contactNumber,string location, string city,
@@ -20,7 +25,7 @@ public class  SalesEmployee : Employee
         HRA=hra;
     }
 
-//override abstract methos
+//override abstract methods
     public override void DoWork()
     {
         Console.WriteLine($"{FirstName} is selling product");
@@ -39,31 +44,8 @@ public class  SalesEmployee : Employee
         return totalSalary;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public void ConductAppraisal()
+    public  virtual void ConductAppraisal()
     {
-         Console.WriteLine("Sales Employee appraisal completed.");
+        Console.WriteLine("Sales Employee appraisal completed.");
     }
 }
