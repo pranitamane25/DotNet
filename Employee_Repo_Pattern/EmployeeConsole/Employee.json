@@ -1,0 +1,56 @@
+[
+  {
+    "Id": 145,
+    "Name": "Sameera",
+    "Salary": 89000,
+    "Department": "Accounts"
+  },
+  {
+    "Id": 2,
+    "Name": "tejal",
+    "Salary": 20000,
+    "Department": "trainer"
+  },
+  {
+    "Id": 0,
+    "Name": "pranita",
+    "Salary": 20000,
+    "Department": "mech"
+  },
+  {
+    "Id": 20,
+    "Name": "rushi",
+    "Salary": 30000,
+    "Department": "medica"
+  },
+  {
+    "Id": 12,
+    "Name": "pra",
+    "Salary": 9000,
+    "Department": "com"
+  },
+  {
+    "Id": 1,
+    "Name": "hha",
+    "Salary": 7989,
+    "Department": "it"
+  },
+  {
+    "Id": 6,
+    "Name": "uhhgf",
+    "Salary": 78,
+    "Department": "it"
+  },
+  {
+    "Id": 11,
+    "Name": "pr",
+    "Salary": 789,
+    "Department": "com"
+  },
+  {
+    "Id": 1,
+    "Name": "pra",
+    "Salary": 200,
+    "Department": "com"
+  }
+]

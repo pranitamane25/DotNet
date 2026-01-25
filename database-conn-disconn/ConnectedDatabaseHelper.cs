@@ -1,5 +1,6 @@
 using System;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace DatabaseApp
 {
@@ -107,7 +108,7 @@ namespace DatabaseApp
                 conn.Open();
                 using (MySqlCommand cmd = new MySqlCommand("GetEmployeeById", conn))
                 {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.StoredProcedure;
                     Console.Write("Enter employee id: ");
                     int empId = Convert.ToInt32(Console.ReadLine());
 

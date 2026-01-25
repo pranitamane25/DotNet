@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\StudentRepo\StudentRepo.csproj" />
+    <ProjectReference Include="..\StudentService\StudentService.csproj" />
+    <ProjectReference Include="..\StudentEntity\StudentEntity.csproj" />
+    <ProjectReference Include="..\TeacherLib\TeacherLib.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
+ 

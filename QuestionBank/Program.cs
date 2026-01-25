@@ -16,7 +16,6 @@ class QuestionProgram
 
                 Console.WriteLine(QB);
 
-
                 //------JSON serialized data
                 string jsonstring = JsonSerializer.Serialize(QB);
                 Console.WriteLine("Serialized Data :" + jsonstring);

@@ -35,7 +35,8 @@ class directconnectivity
             
             static void CreateTable(MySqlConnection connection)
             {
-                string createTableSql = "CREATE TABLE IF NOT EXISTS users(" + "id INT AUTO_INCREMENT PRIMARY KEY," + "name VARCHAR(255) NOT NULL," + "email VARCHAR(255) NOT NULL)";
+            string createTableSql = "CREATE TABLE IF NOT EXISTS users(" + "id INT AUTO_INCREMENT PRIMARY KEY,"
+            + "name VARCHAR(255) NOT NULL," + "email VARCHAR(255) NOT NULL)";
 
                 using (MySqlCommand createTableCmd = new MySqlCommand(createTableSql, connection))
                 {
