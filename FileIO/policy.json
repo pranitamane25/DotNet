@@ -1,0 +1,22 @@
+[
+  {
+    "PolicyId": 102,
+    "CustomerName": "rutuja",
+    "PremiumAmount": 60000
+  },
+  {
+    "PolicyId": 103,
+    "CustomerName": "pranita",
+    "PremiumAmount": 80000
+  },
+  {
+    "PolicyId": 104,
+    "CustomerName": "rutuja",
+    "PremiumAmount": 60000
+  },
+  {
+    "PolicyId": 105,
+    "CustomerName": "pranita",
+    "PremiumAmount": 80000
+  }
+]
