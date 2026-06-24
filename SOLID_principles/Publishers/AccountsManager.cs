@@ -1,6 +1,8 @@
 using SOLID_principles.Models;
 using SOLID_principles.Repositories;
 namespace SOLID_principles.Publishers;
+using System.Linq;  
+using System.Collections.Generic;
 public class AccountsManager
 {
     Account accounts= new Account();
@@ -128,4 +130,36 @@ public class AccountsManager
             }
         }
     }
-}
+            public   int CompareTransactions(Operation op1,Operation op2)
+        {    
+            int CompareTransaction =op2.Transactiontime.CompareTo(op1.Transactiontime);
+            return CompareTransaction;
+        }
+        public List<Operation> GetMiniStatement(int AccountId)
+        {
+            OperationsRepository opRepo = new OperationsRepository();
+
+            List<Operation> operations = opRepo.LoadFromFile(@"Data/operations.json");
+
+            List<Operation> statements = new List<Operation>();
+
+            foreach(Operation operation in operations)
+            {
+                if(operation.AccountId == AccountId)
+                {
+                    statements.Add(operation);
+                }
+            }
+
+            statements.Sort(CompareTransactions);
+
+            if(statements.Count > 5)
+            {
+                statements = statements.GetRange(0, 5);
+            }
+
+            return statements;
+        }
+
+            }
+

@@ -6,7 +6,6 @@ public class AccountsRepository
 {
     public List<Account> LoadFromFile(string fileName)
     {
-
         //DeSerialize code
          if (!File.Exists(fileName))
         {

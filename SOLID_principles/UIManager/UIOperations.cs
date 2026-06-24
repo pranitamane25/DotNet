@@ -16,6 +16,7 @@ public class UIOperations
         Console.WriteLine("2.Withdraw");
         Console.WriteLine("3.FundTransfer");
         Console.WriteLine("4.CheckBalance");
+        Console.WriteLine("5. MiniStatement");
 
         int choice=Convert.ToInt32(Console.ReadLine());
 
@@ -53,9 +54,30 @@ public class UIOperations
             accountManager.BalanceCheck(acc);
 
             break;
+
+            case 5:
+        Console.Write("Account No : ");
+        int accNo = Convert.ToInt32(Console.ReadLine());
+
+        List<Operation> statements = accountManager.GetMiniStatement(accNo);
+
+        Console.WriteLine("\nMini Statement");
+
+        foreach (Operation operation in statements)
+        {
+            Console.WriteLine( $"Date : {operation.Transactiontime}");
+
+            Console.WriteLine( $"Debit : {operation.AccountId}");
+
+            Console.WriteLine($"Credit : {operation.amount}");
+
+            Console.WriteLine( $"Amount : {operation.OperationType}");
+
+            Console.WriteLine("-------------------");
         }
+
+                break;
+            }
         }
 }
-
-
 }
