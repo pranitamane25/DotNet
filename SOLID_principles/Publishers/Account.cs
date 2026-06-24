@@ -36,7 +36,8 @@ public class Account : IDepositOperation , IWithdrawOperation,IFundsTransferOper
         Balance -= amount;
         CheckBalance();
     }
-    private void CheckBalance()
+    
+    public void CheckBalance()
     {
         if (Balance < 1000)
         {
@@ -67,6 +68,8 @@ public class Account : IDepositOperation , IWithdrawOperation,IFundsTransferOper
 
     public void FundTransfer(int fromAccountId, int toAccountId, double amount)
     {
+        
+
 
     }
 }

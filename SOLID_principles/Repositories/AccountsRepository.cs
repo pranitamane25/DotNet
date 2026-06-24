@@ -15,10 +15,9 @@ public class AccountsRepository
         string jsonAccounts=File.ReadAllText(fileName);
        
         List<Account> allExistingAccounts=JsonSerializer.Deserialize<List<Account>>(jsonAccounts)??new List<Account>();
-        
-        
+               
         return allExistingAccounts;
-        
+       
     }
     public bool SaveToFile(string fileName,List<Account> accounts)
     {
