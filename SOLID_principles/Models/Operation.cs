@@ -7,4 +7,7 @@ public class Operation
 
   public  DateTime Transactiontime{get; set;}
   public string  OperationType{get;set;}
+  public int  Balance{get;set;}
+
+  public int InterestRate{get;set;}
 }

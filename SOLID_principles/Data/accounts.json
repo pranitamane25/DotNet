@@ -1,90 +1,105 @@
 [
   {
     "LastTransaction": "2026-06-20T10:30:00",
+    "CurrentBalance": 0,
     "AccountNo": 1001,
     "AccountHolderName": "Pranita Mane",
-    "Balance": 21950.75
+    "Balance": 21900.75
   },
   {
     "LastTransaction": "2026-06-19T15:45:00",
+    "CurrentBalance": 0,
     "AccountNo": 1002,
     "AccountHolderName": "Rahul Sharma",
-    "Balance": 105050.5
+    "Balance": 105100.5
   },
   {
     "LastTransaction": "2026-06-18T09:15:00",
+    "CurrentBalance": 0,
     "AccountNo": 1003,
     "AccountHolderName": "Amit Patil",
     "Balance": 78000
   },
   {
     "LastTransaction": "2026-06-17T14:20:00",
+    "CurrentBalance": 0,
     "AccountNo": 1004,
     "AccountHolderName": "Sneha Kulkarni",
     "Balance": 120500.25
   },
   {
     "LastTransaction": "2026-06-16T11:05:00",
+    "CurrentBalance": 0,
     "AccountNo": 1005,
     "AccountHolderName": "Vikram Deshmukh",
     "Balance": 15400
   },
   {
     "LastTransaction": "2026-06-15T16:30:00",
+    "CurrentBalance": 0,
     "AccountNo": 1006,
     "AccountHolderName": "Neha Joshi",
     "Balance": 98500.75
   },
   {
     "LastTransaction": "2026-06-14T12:45:00",
+    "CurrentBalance": 0,
     "AccountNo": 1007,
     "AccountHolderName": "Karan Gupta",
     "Balance": 67000.1
   },
   {
     "LastTransaction": "2026-06-13T18:10:00",
+    "CurrentBalance": 0,
     "AccountNo": 1008,
     "AccountHolderName": "Pooja Verma",
     "Balance": 43250.8
   },
   {
     "LastTransaction": "2026-06-12T10:00:00",
+    "CurrentBalance": 0,
     "AccountNo": 1009,
     "AccountHolderName": "Rohan Singh",
     "Balance": 250000
   },
   {
     "LastTransaction": "2026-06-11T08:25:00",
+    "CurrentBalance": 0,
     "AccountNo": 1010,
     "AccountHolderName": "Anjali Patil",
     "Balance": 8900.5
   },
   {
     "LastTransaction": "2026-06-10T13:40:00",
+    "CurrentBalance": 0,
     "AccountNo": 1011,
     "AccountHolderName": "Suresh Naik",
     "Balance": 134500.9
   },
   {
     "LastTransaction": "2026-06-09T17:15:00",
+    "CurrentBalance": 0,
     "AccountNo": 1012,
     "AccountHolderName": "Meera Kulkarni",
     "Balance": 45000
   },
   {
     "LastTransaction": "2026-06-08T11:50:00",
+    "CurrentBalance": 0,
     "AccountNo": 1013,
     "AccountHolderName": "Arjun Mehta",
     "Balance": 72000.35
   },
   {
     "LastTransaction": "2026-06-07T09:20:00",
+    "CurrentBalance": 0,
     "AccountNo": 1014,
     "AccountHolderName": "Priya Shah",
     "Balance": 31000.75
   },
   {
     "LastTransaction": "2026-06-06T14:55:00",
+    "CurrentBalance": 0,
     "AccountNo": 1015,
     "AccountHolderName": "Nitin Chavan",
     "Balance": 185000.25

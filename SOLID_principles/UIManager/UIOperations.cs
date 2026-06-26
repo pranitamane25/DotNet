@@ -1,4 +1,3 @@
-
 namespace SOLID_principles.UIOperations;
 using SOLID_principles.Publisher;
 using SOLID_principles.Models;
@@ -52,8 +51,9 @@ public class UIOperations
             Console.WriteLine("Please Enter your account number");
             int acc=Convert.ToInt32(Console.ReadLine());
             accountManager.BalanceCheck(acc);
-
             break;
+
+
 
             case 5:
         Console.Write("Account No : ");
@@ -61,7 +61,7 @@ public class UIOperations
 
         List<Operation> statements = accountManager.GetMiniStatement(accNo);
 
-        Console.WriteLine("\nMini Statement");
+        Console.WriteLine("\n Mini Statement");
 
         foreach (Operation operation in statements)
         {
@@ -75,9 +75,11 @@ public class UIOperations
 
             Console.WriteLine("-------------------");
         }
-
                 break;
             }
         }
+
+        
+
 }
 }

@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using SOLID_principles.Listeners;
 using SOLID_principles.Services;
 using SOLID_principles.Publisher.Operations;
@@ -8,6 +7,7 @@ public class Account : IDepositOperation , IWithdrawOperation,IFundsTransferOper
 {
     private double balance;
     public DateTime LastTransaction{get;set;}
+    public double CurrentBalance{get;set;}
     public int AccountNo{get;set;}
     public string AccountHolderName{get;set;}="";
     private readonly List<IAccountListener> listeners = new List<IAccountListener>();

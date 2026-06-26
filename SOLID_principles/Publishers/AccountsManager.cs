@@ -1,7 +1,6 @@
 using SOLID_principles.Models;
 using SOLID_principles.Repositories;
-namespace SOLID_principles.Publishers;
-using System.Linq;  
+namespace SOLID_principles.Publishers; 
 using System.Collections.Generic;
 public class AccountsManager
 {
@@ -100,7 +99,6 @@ public class AccountsManager
                 status=true;
         return false; 
         } 
-
         public double GetBalance(int AccountNo)
     {List<Account> allExistingAccounts=mgr.LoadFromFile(@"Data/accounts.json");
         
@@ -114,7 +112,6 @@ public class AccountsManager
 
                 return account.Balance;
             }
-
         }
         return 0;
     }
@@ -130,13 +127,14 @@ public class AccountsManager
             }
         }
     }
-            public   int CompareTransactions(Operation op1,Operation op2)
+            public int CompareTransactions(Operation op1,Operation op2)
         {    
             int CompareTransaction =op2.Transactiontime.CompareTo(op1.Transactiontime);
             return CompareTransaction;
         }
         public List<Operation> GetMiniStatement(int AccountId)
         {
+            
             OperationsRepository opRepo = new OperationsRepository();
 
             List<Operation> operations = opRepo.LoadFromFile(@"Data/operations.json");
@@ -161,5 +159,40 @@ public class AccountsManager
             return statements;
         }
 
+        private double Calculate(List<Operation> accountOperations)
+        {
+            Operation firstOperation = new Operation();
+            Operation secondOperation = new Operation();
+            double totalInterestNow = 0;
+
+            firstOperation = accountOperations[0];
+
+            double finalInterset = 0;
+            for (int i = 1; i < accountOperations.Count(); i++)
+            {
+                secondOperation = accountOperations[i];
+                TimeSpan consecutiveOperationsTimeSpan = secondOperation.Transactiontime - firstOperation.Transactiontime;
+
+                double totalDays = consecutiveOperationsTimeSpan.TotalDays;
+                // Console.WriteLine("" + totalDays);
+
+                double baseAmount = 1 + (InterestRate / 100.0 / 365.0); //formula for calcuating  daily balance
+                // Console.WriteLine(baseAmount);
+
+                double afterpower = Math.Pow(baseAmount, totalDays);
+                // Console.WriteLine(afterpower);
+
+                totalInterestNow = firstOperation.Balance * afterpower;
+                // Console.WriteLine("" + totalInterestTillNow);
+
+                double interset = totalInterestNow - firstOperation.Balance;
+                finalInterset += interset;
+                firstOperation = secondOperation;
+
             }
+            return finalInterset;
+        }
+
+
+    }
 
