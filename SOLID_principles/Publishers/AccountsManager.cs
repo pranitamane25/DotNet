@@ -188,11 +188,63 @@ public class AccountsManager
                 double interset = totalInterestNow - firstOperation.Balance;
                 finalInterset += interset;
                 firstOperation = secondOperation;
-
             }
             return finalInterset;
         }
 
+                public double CalculateInterest(string accountId)
+                {
+                    List<Operation> allOperations = new List<Operation>();
+                    allOperations = OperationsRepository.GetAllOperations();
+                
+                    List<Operation> accountOperations=new List<Operation>();
+                    accountOperations = allOperations
+                        .Where(o => o.AccountNumber == accountId)
+                        .ToList();
 
-    }
+                    bool userExist = accountOperations.Count > 0;
+
+                    if (userExist)
+                    {
+                        double finalInterset=Calculate(accountOperations);
+                        return finalInterset;
+                    
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+
+                public bool ApplyInterest()
+                {
+                    List<Operation> allOperations = new List<Operation>();
+                    bool applyInterestStatus=false;
+                    allOperations= OperationsRepository.GetAllOperations();
+                    List<Account> accounts = AccountsRepository.GetAllAccounts();
+                    foreach (Account account in accounts)
+                    {
+                    double totalInterest= CalculateInterest(account.AccountNo);
+                    
+                        bool status= Deposit(account.AccountNo, totalInterest);
+                        
+                    double balance=GetBalance(account.AccountNo);
+                        if (status)
+                        {
+                            Operation newOperation = new Operation { AccountNumber = account.AccountNumber, Status = "I", StatusMessage = "Interest is deposited", OperationON = DateTime.Now, Amount = totalInterest, CurrentBalance = balance };
+                            allOperations.Add(newOperation);
+                            OperationsRepository.SaveOperations(allOperations);
+                            applyInterestStatus=true;
+                        }
+                        else
+                        {
+                            applyInterestStatus = false;
+                        }
+                    }
+                    return applyInterestStatus;
+                }
+            }
+
+
+    
 

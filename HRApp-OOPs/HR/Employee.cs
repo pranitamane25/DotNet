@@ -1,6 +1,5 @@
 using HR.Interfaces;
 namespace HR;
-
 public abstract class Employee{
 public int Id{get;set;}
 public string FirstName{get;set;}
@@ -11,7 +10,7 @@ public string ContactNumber{get;set;}
  public DateTime DateOfBirth { get;set;}
  public double Salary{get;set;}
  public string Location{get;set;}
- public Employee()
+ public Employee()//default constructor
     {
         
     }
@@ -35,7 +34,6 @@ public virtual double ComputePay()
 {
     return Salary;
 }
-
 public override string ToString()
 {
 
