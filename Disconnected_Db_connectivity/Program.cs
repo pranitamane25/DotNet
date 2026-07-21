@@ -2,7 +2,7 @@
 using System.Data;
 using MySql.Data.MySqlClient;
 using Microsoft.Extensions.Configuration;
-class Program
+public class Program
 {
     static void Main(string[] args)
     {
@@ -14,7 +14,7 @@ class Program
             .Build();
 
             string ConnectionStrings=configuration.GetConnectionString("DefaultConnection");
-            string query="select * from Employee";
+            string query="update employee set Name='Pranita' where Id=2";
 
             using (MySqlConnection conn=new MySqlConnection(ConnectionStrings))
             {
@@ -32,7 +32,7 @@ class Program
         }
             catch(Exception ex)
         {
-            Console.WriteLine("Error Message:" +ex.Message);
+            Console.WriteLine("Error Message:" + ex.Message);
         }
         }
 }
