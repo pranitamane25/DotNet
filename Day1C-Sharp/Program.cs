@@ -43,6 +43,18 @@
             Console.WriteLine("Division: " + division);
             Console.WriteLine("Remainder: " + remainder);
 
+            //swapping two numbers
+
+            int a1 = 10;
+            int b1 = 20;
+            int temp;
+
+            temp = a1;
+            a1 = b1;
+            b1 = temp;
+
+            Console.WriteLine($"After swapping the numbers a1; {a1}and b1:{b1}");
+
 
 
 
