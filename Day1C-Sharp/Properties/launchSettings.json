@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Day1C-Sharp": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
